@@ -1,0 +1,81 @@
+#button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#button:hover {
+    color: darkslategray;
+}
+#image {
+
+}
+#close {
+    cursor: pointer;
+    color: black;
+    white-space: nowrap;
+}
+#close:hover {
+    font-size: large;
+    color: red;
+}
+#imageimg {
+    float: left;
+}
+ol {
+s
+}
+li {
+    color: green;
+}
+li:hover {
+    color: blue;
+    cursor: pointer;
+    font-size: large;
+}
+body {
+    display: block;
+}
+ol {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+span {
+    position: fixed;
+    background-color: limegreen;
+    z-index: 1000;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: 900;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; 
+}
+span:hover {
+    background-color: blue;
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+}
+@media print {
+    #close {
+        display: none;
+    }
+    #button {
+        display: none;
+    }
+    span {
+        position: fixed;
+        background-color: green;
+        z-index: 1000;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        font-weight: 900;
+        cursor: pointer;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
