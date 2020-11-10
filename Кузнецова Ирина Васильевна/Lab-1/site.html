@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+        <link rel = "stylesheet" href = "main.css">
+        <link rel="stylesheet" href="media.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="up.js"></script>
+        <script type="text/javascript" src="popup.js"></script>
+	</head>
+    
+    <body>
+        <header>
+            <div class = "logo">
+                <a href="site.html"><img width = "65" height = "50" src = "Images/logo.png"></a>
+            </div>
+            <div class = "dog">
+                YOUR PET
+            </div>   
+        </header>
+
+        <section id = "general">
+		
+            <div class = "menu">
+                <nav>
+                    <ul class="menu-main">
+                        <li><a href="site.html">Основная информация</a></li>
+                        <li><a href="facts.html">История происхождения</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                    </ul>
+                </nav>     
+            </div>
+                
+            <div class = "name">  
+                <h1>Кавалер-кинг-чарльз-спаниель</h1>
+            </div>  
+            
+        
+            <div class = "first">
+
+                <div>
+
+                    <div class = "text">
+                        <article class = "King">
+                            <h2>Общая информация</h2>
+                        
+                            <div class = "image">
+                                <img width = "250" height = "160" src = "Images/king1.jpg">
+                            </div>
+
+                            <p>Считается, что способность снимать напряжение принадлежит кошкам. Но среди собак также есть порода, которая обладает таким же даром. Речь идет о кавалер-кинг-чарльз-спаниеле. В <a href = "https://ru.wikipedia.org/wiki/Англия" target = "_blank">Англии</a> этих животных называют «создающие комфорт». Они являются королевскими питомцами, их содержат во многих королевских семьях.</p>                   
+                            <p>Кавалер-кинг-чарльз-спаниель  — порода собак-компаньонов, маленький <a href = "https://ru.wikipedia.org/wiki/Спаниель" target = "_blank">спаниель</a>. Как и все спаниели, может поднимать птицу в подлеске, но всегда использовался именно в качестве домашнего любимца.</p>
+                            <p>В давние времена кавалер-кинг ходил с хозяином на охоту, поднимал птицу в подлеске, сейчас все изменилось. Эти миниатюрные животные полностью превратились в собак-компаньонов и домашних любимцев.</p>
+                            <p>Происхождение кавалера тесно связано с происхождением другого <a href = "https://ru.wikipedia.org/wiki/Континентальный_той-спаниель" target = "_blank">той-спаниеля</a> — кинг-чарльз-спаниеля, а как самостоятельная порода кавалер-кинг-чарльз был признан лишь в XX веке.</p>
+                        </article>
+                        
+                        <article class = "temperament">
+                            <h2>Темперамент</h2>                                                                   
+                                <p>Кавалер-кинг-чарльз-спаниели активны, эмоциональны и бесстрашны. Собаки игривы, ласковы и не склонны проявлять нервозность. Они пригодны к непродолжительной охоте, и в целом — отличные декоративные собаки.</p>
+                                <div>
+                                    <table>                               
+                                        <tr>
+                                            <td>Агрессивность:</td>
+                                            <td>Не агрессивная(1/5)</td>
+                                        </tr>        
+                                        <tr>
+                                            <td>Активность:</td>
+                                            <td>Высокая(4/5)</td>
+                                        </tr>        
+                                        <tr>
+                                            <td>Дрессировка: </td>
+                                            <td>Легко(4/5)</td>
+                                        </tr>        
+                                        <tr>
+                                            <td>Дружелюбность:</td>
+                                            <td>Очень дружелюбный(5/5)</td>
+                                        </tr>       
+                                        <tr>
+                                            <td>Отношение к одиночеству:</td>
+                                            <td>Умеренное время(3/5)</td>
+                                        </tr>        
+                                        <tr>
+                                            <td>Интеллект:</td>
+                                            <td>Умная(4/5)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Охранные качества:</td>
+                                            <td>Слабые(1/5)</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                        </article>
+
+                        <article class = "coloration">
+                            <h2>Окрас</h2>
+                            <p>
+                                Официально утвержденными являются следующие типы окрасов кавалер-кинг-чарльз-спаниелей:
+                                <ul>
+                                    <li>бленхейм (выразительные каштановые пятна на белом фоне);</li>
+                                    <li>черный с подпалом;</li>
+                                    <li>рубиновый (насыщенный рыжий оттенок);</li>
+                                    <li>триколор (черный с белым и рыжими подпалинами на бровях, скулах, тыльной поверхности ног, ушах и под хвостом).</li>
+                                </ul>
+                            </p>
+                        </article>
+                    </div>   
+                </div>     
+            </section>
+    </div>
+
+    <button class="open-button" onclick="openForm()">Заказать питомца</button>
+
+    <div class="form-popup" id="myForm">
+        <form action="#" class="form-container">
+          <label for="name"><b>E-mail</b></label>
+          <input type="text" placeholder="Ваш e-mail" name="name" required>
+          <label for="email"><b>Комментарий</b></label>
+          <input type="text" placeholder="Ваш комментарий" name="email" required>
+          <button type="submit" class="btn">Заказать</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Отмена</button>
+        </form>
+    </div>
+    
+    <div id="button-up">
+        <img width = "80" height = "80" src = "Images/up2.png">
+        
+    </div>
+
+    <footer>
+        <p>Copyright 2020</p>
+    </footer>
+    </body>
+    
+
+</html>

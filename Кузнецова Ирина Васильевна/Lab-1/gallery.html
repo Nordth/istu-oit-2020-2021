@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+        <link rel = "stylesheet" href = "main.css">
+        <link rel="stylesheet" href="media.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="up.js"></script>
+        <script type="text/javascript" src="popup.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <div class = "logo">
+                <a href="site.html"><img width = "65" height = "50" src = "Images/logo.png"></a>
+            </div>
+            <div class = "dog">
+                YOUR PET
+            </div>  
+        </header>
+
+        <section id = "general">
+       
+	        <div class = "menu">
+                <nav>
+                    <ul class="menu-main">
+                        <li><a href="site.html">Основная информация</a></li>
+                        <li><a href="facts.html">История происхождения</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                    </ul>
+                </nav>     
+            </div>
+			
+            <div class = "name">     
+                <h1>Галерея</h1>
+            </div>
+         
+            <div class = "two-images">
+                <img src = "Gallery/king1.jpeg"  class="left">
+                <img src = "Gallery/king2.jpg" class="right">
+            </div>
+
+            <div class = "two-images">
+                <img src = "Gallery/king3.jpg" class="left">
+                <img src = "Gallery/king4.jpg" class="right">
+            </div>     
+
+            <div class = "two-images"> 
+                <img src = "Gallery/king5.jpg" class="left">
+                <img src = "Gallery/king6.jpg" class="right">
+            </div> 
+        
+            <button class="open-button" onclick="openForm()">Заказать питомца</button>
+
+            <div class="form-popup" id="myForm">
+                <form action="#" class="form-container">
+                <label for="name"><b>E-mail</b></label>
+                <input type="text" placeholder="Ваш e-mail" name="name" required>
+                <label for="email"><b>Комментарий</b></label>
+                <input type="text" placeholder="Ваш комментарий" name="email" required>
+                <button type="submit" class="btn">Заказать</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Отмена</button>
+                </form>
+            </div>
+    
+        </section>
+    
+    <div id="button-up">
+        <img width = "80" height = "80" src = "Images/up2.png">
+    </div>
+
+    <footer>
+        <p>Copyright 2020</p>
+    </footer>
+    </body> 
+
+</html>    

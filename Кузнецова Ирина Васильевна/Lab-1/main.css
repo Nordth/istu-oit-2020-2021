@@ -1,0 +1,231 @@
+    body
+    {
+        height: auto;
+        background: linear-gradient(to top,#D2691E 0%, #E4E4D8 10%, #67e467 99%);
+        margin: 0 auto;
+        border: 1px solid #000;
+    }
+
+    header
+    {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+        background:#FFFFFF;
+        height: 70px;
+        margin: 0 auto;
+        border: 1px solid #000;
+       
+    } 
+
+    footer{
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 auto;
+        border: 1px solid #000;
+        background:#FFFFFF;
+        text-align: center;
+        height: 50px;
+    }
+
+    .logo 
+    {
+        height: auto;
+        float: right;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+
+    #general
+    {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+        background:#FFFFFF;
+        margin: 0 auto;
+        border: 1px solid #000;
+    }
+
+    .text a 
+    {
+        color:green;
+        text-decoration: none;
+    }
+
+    .text a:visited {
+        color:#D2691E; 
+       } 
+   
+    .text a:hover {
+        color: #32CD32;  
+        text-decoration: underline; 
+    }
+
+    main, footer, .header {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+   
+    .menu-main li:hover{
+        background: #98FB98;
+        color:green;
+        list-style-type: none;
+    }
+    .menu-main a{
+		width: 300px;
+        color:green;
+        text-decoration: none;
+    }
+	
+	.menu-main li{
+		border: 1px solid green;
+		width: 270px;
+    } 
+    .dog{
+        
+        font-size: 36px;
+        padding-top: 15px;
+        padding-left: 10px;
+        text-align: left;
+    }
+
+    header{
+        background: #46b939;
+        height: 70px;
+       }
+	
+    .menu-main{
+        font-size: 24px;
+        text-align: center;
+		margin: 0;
+        float: right;   
+    }   
+
+    nav {
+        padding-left: 10px;
+      }
+      
+    nav li {
+        display: block;
+    }
+
+    footer p {
+        padding-top: 5px; 
+    }
+
+	.first{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+  
+    #button-up {
+        display:none;
+        left: 0;
+        margin: 0;
+        position: fixed;
+        bottom: 50px;
+        outline:none;
+        cursor:pointer;
+    }
+
+    .image{
+        float: left;
+        margin: 10px;
+    }
+
+    * {box-sizing: border-box;}
+
+    
+    .open-button {
+        position: fixed;
+        bottom: 15px;
+        right: 12px;
+        width: 100px;
+        height: 60px;
+        background: lightsalmon;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+
+    .form-popup {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        right: 14px;
+    }
+
+    .form-container {
+        max-width: 320px;
+        padding: 10px;
+        background-color: white;
+    }
+
+    .form-container input[type=text], .form-container input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    .form-container .btn {
+        background-color: #98FB98;
+        
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .form-container .cancel {
+        background-color:#98FB98;
+    }
+
+    .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+    }
+
+    .two-images{
+		display: flex;
+		max-width: 1024px;
+		flex-direction: row;
+		justify-content: space-between;
+    }
+
+    .left, .right{
+        width: 350px;
+        height: 350px;
+        margin: 30px;		
+    }
+
+    .left{
+        border: 10px solid green;
+    }
+
+    .right{
+        border: 10px solid chocolate;
+    }
+
+    h1{
+        padding-left: 250px;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+	
+	p{
+		text-indent: 20px;
+    }
+
+   
