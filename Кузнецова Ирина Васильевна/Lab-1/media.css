@@ -1,0 +1,77 @@
+@media(max-width:1024px) {
+
+    .dog{ display: none;}
+
+
+    .logo {
+        float: unset;
+        text-align: center;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+    
+	nav{
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+		padding: 0;
+      }
+	  
+	.menu-main li{
+		width: 100%;
+    }  
+    nav li {
+        display: block;
+    }
+    img {
+        max-width: 100%;
+    }
+
+    .menu-main{
+        text-align: center;
+        margin: 0 auto;
+        float: none;
+        padding: 0px;
+        
+    }
+
+    .name{
+        text-align: center;
+    }
+
+    h1{
+        padding-left: 0px;
+		margin-bottom: 0;
+    }
+
+    #button-up{
+    visibility: hidden;
+    }
+
+    .open-button{
+        visibility: hidden; 
+    }
+	
+	@media(max-width:900px) {
+		
+		.two-images{
+		display: flex;
+		max-width: 1024px;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 0;
+		}
+		
+		.left, .right{
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		}
+    
+	}
+
+}
