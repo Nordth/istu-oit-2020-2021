@@ -1,0 +1,126 @@
+@media (max-width:1023px) {
+
+  * {
+      box-sizing: border-box;
+  }
+  h1{
+    font-size: 22px;
+  }
+  h4{
+    margin: 0;
+    position: relative;
+    bottom:  10px;
+  }
+  .container{
+    width: 85%;
+  }
+  p{
+    font-size: 14px;
+  }
+  ul{
+    font-size: 14px;
+    padding-right: 30px;
+  }
+  table{
+    width: 100%;
+    font-size: 13px;
+    position: relative;
+  }
+  .main{
+    width: 100%;
+    max-height: 80%;
+  }
+  .slider2 {
+    height: 300px;
+    position: relative;
+    width: 60%;
+    right: 20%;
+    left: 21%;
+  }
+  .slide2 img{
+    width: 85%;
+    height: 100%;
+    right: 20%;
+  }
+  .slides {
+    width: 350%;
+  }
+  .bar {
+    position: relative;
+    left: 21%;
+  }
+  footer{
+    width: 100%;
+    font-size: 12px;
+  }
+  .cls_old{
+    float: none;
+    width: 95%;
+    height: 80%;
+  }
+  .header__inner{
+    display: block;
+  }
+  .logo_img{
+    display: block;
+    margin: 0 auto;
+  }
+  .nav {
+      width: 100px;
+      min-width: 150px;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      margin: 0;
+      left: -250px;
+      padding: 15px 20px;
+      transition: left 0.8s;
+      background: grey;
+      z-index: 2;
+  }
+  .nav__link {
+      display: block;
+      position: relative;
+      top:40px;
+      right: 20px;
+      font-size: 12px;
+      width: 100%;
+      line-height: 2.5;
+      opacity: 0;
+  }
+  .nav-toggle {
+      position:relative;
+      left: 230px;
+      top: 1em;
+      padding: 0.5em;
+      background: inherit;
+      color: white;
+      font-size: 1.2em;
+      line-height: 1;
+  }
+  .nav-toggle:after {
+      content: '\2630';
+      text-decoration: none;
+  }
+
+  #nav-toggle{
+      position: relative;
+      display: none;
+  }
+  #nav-toggle:checked ~ .nav {
+      left: 0;
+  }
+  #nav-toggle:checked ~ .nav > .nav-toggle:after {
+      content: '\2715';
+  }
+  #nav-toggle:checked ~ .nav > .nav-toggle {
+      left: 100px;
+      right: 2px;
+      top: 1em;
+  }
+  #nav-toggle:checked ~ .nav > .nav__link {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
