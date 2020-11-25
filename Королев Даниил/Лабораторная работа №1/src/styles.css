@@ -1,0 +1,207 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: sans-serif;
+	color: #E0E0E0;
+}
+
+#app{
+	display: flex; 
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 1024px;
+	background: black;
+	border: 1px white solid;
+}
+
+#middle-box{
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+	width: 1024px;
+	min-height: 800px;
+	background: black; 
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px white solid;
+}
+
+#content-box{
+	/* display: flex; */
+	/* flex-direction: column; */
+	width: 100%;
+	padding: 24px;
+}
+
+#content-heading{
+	display: flex;
+	align-self: center; 
+}
+
+#menu{
+	padding: 10px;
+}
+
+.menu-item{
+	color: #fff;
+	border: 1px solid #fff;
+	margin: 12px;
+	background: #000;
+	width: 100px;
+	padding: 12px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.menu-item:hover{
+	transition: all 0.5s;
+	color: #000;
+	background: #fff;
+}
+
+.menu-item > a{
+	display: flex;
+	align-self: center;
+}
+
+a {
+	text-align:center;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  color: #a0a0a0;
+  display: inline-block;
+}
+
+a:hover{
+	color: blue;
+}
+
+
+p, li{
+	text-align: justify;
+	line-height: 20px;
+}
+
+li{
+	padding : 10px;	
+}
+
+.content-img{
+	width: 200px;
+	height: 200px;
+	float: left;
+	padding: 10px;
+}
+
+#img-logo{
+	width: 80px;
+	height: 80px;
+	padding: 10px;
+}
+
+footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 1024px;
+	background: black;
+	border: 1px white solid;
+}
+
+#title{
+	display: flex;
+	margin-left: 30px;
+}
+
+#logo{
+	display: flex;
+	align-self: center;
+	margin-right: 10px;
+}
+
+.gradient-black{
+	background: linear-gradient(to bottom,  
+		rgba(0,0,0,1) 0%,
+		rgba(44,44,44,1) 28%,
+		rgba(43,43,43,1) 72%,
+		rgba(0,0,0,1) 100%
+		); 
+}
+
+div.scrollup {
+  position: fixed; /* фиксированная позиция */
+  right: 5px; /* расстояние от правого края */
+  bottom: 20px; /* расстояние от нижнего края */
+  padding: 4px 10px; /* отступы до содержимого блока */
+  font-size: 20px; /* размер шрифта (иконки) */
+  border-top-left-radius: 4px; /* скругление верхнего левого угла */
+  border-top-right-radius: 4px; /* скругление верхнего правого угла */
+  cursor: pointer; /* форма курсора */
+  display: none; /* не отображать элемент */
+  text-align: center; /*выравнивание содержимого элемента по центру */
+}
+div.scrollup:hover {
+  background-color: #000; /* цвет заднего фона при наведении */
+}
+
+
+table {display: flex; border: 1px solid grey; align-self: center;} 
+caption {display: flex; align-self: center;}
+/* границы ячеек первого ряда таблицы */
+th {border: 1px solid grey; padding: 10px;}
+/* границы ячеек тела таблицы */
+td {border: 1px solid grey; padding: 10px;}
+
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column-reverse;
+  }
+  #title{
+	margin-left: 0px;
+  }
+  #logo{
+	  margin-right: 0px;
+  }
+  #middle-box{
+	flex-direction: column-reverse;
+	align-items: center;
+  }
+  #menu{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  .content-img{
+	  display: flex;
+	  float: none;
+	  align-self: center;
+	  margin: 0;
+  }
+  #content-box{
+	 flex-direction: column;
+	 display: flex;
+	 align-items: center;
+	 width: 80vw;
+  }
+  footer{
+	  font-size: 4vh;
+	  width: 100vw;
+  }
+  .menu-item{
+	  display: flex;
+	  font-size: 4vh;
+	  justify-content: center ;	
+	  align-items: center;
+	  width: 80vw;
+	  height: 7vh;
+  }
+}
