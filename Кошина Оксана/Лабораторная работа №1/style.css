@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+}
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 1024px;
+    background: linear-gradient(to top, #9b1974, #ffdefb);
+    margin: 0 auto;
+}
+header {
+    background-color: rgba(255, 210, 238, 0.534);
+    border: 5px solid #fa61e8;
+    display: grid;
+    text-align: center;
+    padding-bottom: 10px;
+}
+main {
+    background-color: white;
+    background: linear-gradient(to top, #ffa4e4, #ffecfd);
+    border: 2px solid #7a0867;
+    text-align: justify;
+    padding-left: 5%;
+    padding-top: 10px;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    min-height: 78%;
+}
+footer {
+    border: 2px solid #713674;
+    max-width: 1024px;
+    text-align: center;
+    margin-bottom: 0;
+    background-color: rgb(202, 151, 187);
+}
+table {
+    margin: auto;
+}
+.phone {
+    padding: 10px;
+}
+
+a {
+    color: #8B0000; 
+    text-decoration: none; 
+}
+a:visited {
+    color: #8B0000; 
+}
+a:hover {
+    color: #008B8B;    text-decoration: none; 
+}
+li a {
+display: block;
+padding: 10px 16px; 
+color: #000; 
+text-decoration: none; }
+
+li a:visited {
+    color: #000; 
+}
+li a:hover {
+    text-decoration: none; 
+    color: #000; 
+    background: #F08080; 
+}
+
+nav {
+    float: left;
+    margin: 20px;
+}
+container {
+    background-color: #FFFFFF;
+    margin: 0px 10% 0px 10%;
+    border: 1px solid #000000;
+    min-height: 100%;
+}
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    text-align: center;
+    padding: 20px;
+}
+#toTop {
+    width: 100px;
+    border: 1px solid #000;
+    background: #f7f7f7;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+    color: #000;
+    font-size: 11px;
+}
+
+.content-image img {
+    padding:0;
+    height: 100px;
+    width: 150px;
+    float: none;
+    margin: 0 0 10px 10px;
+    display: inline-block;
+}
+
+.imgtop img {
+    height: 14%;
+    width: auto;
+    float: left;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width:1024px) {
+    nav{
+        width:100%;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+    .imgtop img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        width:100%;
+        height:auto;
+        text-align: center;
+    }
+}
