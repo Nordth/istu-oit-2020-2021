@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- Стили -->
+		<style>
+			.Open .Container {
+				display: block;
+			}
+
+			.Closed .Container {
+				display: none;
+			}
+			
+			.Open .Expand, .Closed .Expand, .Content, .viewList{
+				cursor: pointer;
+			}
+			
+			.list li{
+				list-style-type: none;
+			}
+			
+			body{
+				display:grid;
+				grid-template-columns: 35% 65%;
+			}
+			
+			img{
+				float:left;
+				padding-right:10px;
+			}
+			
+			.forma{
+				display:none;
+				background:#CCCCCC;
+				position:absolute;
+				top: 30%;
+				left: 30%;
+				margin: -100px 0 0 -100px;
+				z-index:999;
+				padding:7px;
+			}
+			
+			.information{
+				display:none;
+			}
+			
+			.list, .view{
+				min-height:300px;
+				margin:6px;
+				padding:8px;
+				background:#FFFFFF;
+			}
+			
+			body{
+				background:#EEEEEE;
+			}
+			
+			.Content:hover{
+				background:#e04050;
+			}
+
+            span {
+                padding: 0px 5px 0px 5px;
+            }
+		</style>
+	</head>
+	<body>
+		<script>
+            var infoId = "";
+			//Разделы
+			class UnitA{
+				constructor(title,children){
+					this.title=title;
+					this.children=children;
+				}
+            }
+			//Продукты
+			class UnitB{
+				constructor(title,image,text){
+					this.title=title;
+					this.image=image;
+					this.text=text;
+				}
+            }
+            document.onclick = function (e) {
+				//Скрипт разворачивания и сворачивания разделов каталога
+				if(e.target.className=="Expand"){
+					var classes=e.target.parentNode.className.split(' ');
+					if(classes[1]=="Open"){
+						e.target.innerHTML="[+]";
+						e.target.parentNode.className=classes[0]+" Closed";
+					}
+					else{
+						e.target.innerHTML="[-]";
+						e.target.parentNode.className=classes[0]+" Open";
+					}
+				}
+				if(e.target.className=="Content"){
+					var id=e.target.parentNode.id;
+					showViewList(id);
+				}
+				if(e.target.className=="viewList"){
+					var id=e.target.id;
+					showViewList(id);
+				}
+			}
+			function showViewList(id){
+				var ids=id.split('.');
+				var unit=baseA;
+				for(var index=1;index<ids.length;index++){
+					unit=unit.children[ids[index]-1];
+				}
+				var view=document.getElementsByClassName('view')[0];
+				if(unit instanceof UnitA){
+					var lis="";
+					for(var index=0;index<unit.children.length;index++){
+						lis+="<li class=\"viewList\" id=\""+id+"."+(index+1)+"\">"+unit.children[index].title+"</li>";
+					}
+					view.innerHTML="<h1>"+unit.title+"</h1><ul>"+lis+"</ul><button id=\"show\">Добавить элемент</button>";
+					document.querySelectorAll('#show')[0].onclick = function() {
+						dialog.style.display="block";
+						infoId=id;
+					};
+				}
+				if(unit instanceof UnitB){
+					var lines=unit.text.split('\n');
+					var lis="";
+					for(var index=0;index<lines.length;index++){
+						lis+="<div>"+htmlspecialchars(lines[index])+"</div>";
+					}
+					view.innerHTML="<h1>"+unit.title+"</h1><img src=\""+unit.image+"\">"+lis;
+				}
+			}
+			function htmlspecialchars(html) { 
+				html = html.replace(/</g, "&lt;"); 
+				html = html.replace(/>/g, "&gt;"); 
+				html = html.replace(/"/g, "&quot;"); 
+				return html; 
+			}
+			var baseA = new UnitA("Каталог",[
+                new UnitA("Телефоны", [
+					new UnitB(" Панасоник 150 ","sonic.png","Новейшая модель телефона от панасоник...\n[Описание]")
+                ]),
+                new UnitA("Планшеты", [
+					new UnitB(" BananaPad ","banana.png","Планшет для работы...\n[Описание]")
+                ]),
+				new UnitA("Мышки",[
+                    new UnitA("Беспроводные", [
+						new UnitB(" Гениус 500199 ","GenMouseBez.jpg","Мышка экстра-класса, крутая...\n[Описание]")						
+                    ]),
+					new UnitA("Проводные",[
+						new UnitB(" Гениус 100500 ","GenMouse.jpg","Мышка экстра-класса со съемным проводом...\n[Описание]"),
+						new UnitB(" Асер 42 ","AcerMouse.png","Мышка эконом-класса, игровая...\n[Описание]")
+					])
+				]),
+                new UnitA("Сетевое оборудование", [
+					new UnitB(" Роутер ТПЛИНК ","Router.jpg","Уникальный роутер поддерживающий 4g...\n[Описание]")
+                ])
+			]);
+			document.write("<div class=\"list\">");
+			document.write("<ul>");
+			function showAUnit(unitA,i,lastId){
+				var nowId="";
+				if(lastId=="")
+				{
+					nowId=i;
+				}
+				else{
+					nowId=lastId+"."+i;
+				}
+				document.writeln("<li class=\"NodeA Closed\" id=\""+nowId+"\">");
+				document.writeln("<span class=\"Expand\">[+]</span>");
+				document.writeln("<span class=\"Content\">"+unitA.title+"</span>");
+				document.writeln("<ul class=\"Container\">");
+				for(var index=0;index<unitA.children.length;index++){
+					if(unitA.children[index] instanceof UnitA){
+						showAUnit(unitA.children[index],index+1,nowId);
+					}
+					else{
+						showBUnit(unitA.children[index],index+1,nowId);
+					}
+				}
+				document.writeln("</ul>");
+				document.writeln("</li>");
+			}
+			function showBUnit(unitB,i,lastId){
+				var nowId="";
+				if(lastId=="")
+				{
+					nowId=i;
+				}
+				else{
+					nowId=lastId+"."+i;
+				}
+				document.writeln("<li class=\"NodeB\" id=\""+nowId+"\">");
+				document.writeln("<span class=\"Content\">"+unitB.title+"</span>");
+				document.writeln("</li>");
+			}
+			showAUnit(baseA,1,"");
+			document.writeln("</ul>");
+			document.writeln("</div>");
+			document.writeln("<div class=\"view\">");
+			document.writeln("</div>");
+			document.writeln("<div class=\"forma\">");
+			document.writeln("<form name=\"unit\">");
+			document.writeln("<div>");
+			document.writeln("<label><INPUT TYPE=\"radio\" NAME=\"Code\" VALUE=\"razdel\"onClick=\"if(this.checked) CheckRadio(this.value);\">Раздел</label>");
+			document.writeln("<label><INPUT TYPE=\"radio\" NAME=\"Code\" VALUE=\"info\"onClick=\"if(this.checked) CheckRadio(this.value);\">Информация</label>");
+			document.writeln("</div>");
+			document.writeln("<div>");
+			document.writeln("<div>Заголовок:</div>");
+			document.writeln("<div><INPUT NAME=\"zagolovok\"></div>");
+			document.writeln("</div>");
+			document.writeln("<div class=\"information\">");
+			document.writeln("<div>");
+			document.writeln("<div>Ссылка на картинку:</div>");
+			document.writeln("<div><INPUT NAME=\"url\"></div>");
+			document.writeln("</div>");
+			document.writeln("<div><textarea name=\"text\">Описание.</textarea></div>");
+			document.writeln("</div>");
+			document.writeln("<INPUT  TYPE=\"button\" value=\"Сохранить\" onClick=\"Complete();\"></form>");
+			document.writeln("</div>");
+			var dialog = document.querySelectorAll('.forma')[0];
+			function CheckRadio(value)
+			{
+				var info = document.querySelectorAll('.information')[0];
+				if(value=="info"){
+					info.style.display="block";
+				}
+				else{
+					info.style.display="none";
+				}
+			}
+			function Complete(){
+				var dialog = document.querySelectorAll('.forma')[0];
+				dialog.style.display="none";
+				var ids=infoId.split('.');
+				var unit=baseA;
+				for(var index=1;index<ids.length;index++){
+					unit=unit.children[ids[index]-1];
+				}
+				if(document.unit.Code.value=="info"){
+					unit.children.push(new UnitB(document.unit.zagolovok.value,document.unit.url.value,document.unit.text.value,[]));
+				}
+				else{
+					unit.children.push(new UnitA(document.unit.zagolovok.value,[]));
+				}
+				var list = document.querySelectorAll('.list')[0];
+				str="";
+				str+="<ul>";
+				function showAUnitS(unitA,i,lastId){
+					var nowId="";
+					if(lastId=="")
+					{
+						nowId=i;
+					}
+					else{
+						nowId=lastId+"."+i;
+					}
+					str+="<li class=\"NodeA Closed\" id=\""+nowId+"\">";
+					str+="<span class=\"Expand\">[+]</span>";
+					str+="<span class=\"Content\">"+unitA.title+"</span>";
+					str+="<ul class=\"Container\">";
+					for(var index=0;index<unitA.children.length;index++){
+						if(unitA.children[index] instanceof UnitA){
+							showAUnitS(unitA.children[index],index+1,nowId);
+						}
+						else{
+							showBUnitS(unitA.children[index],index+1,nowId);
+						}
+					}
+					str+="</ul>";
+					str+="</li>";
+				}
+				function showBUnitS(unitB,i,lastId){
+					var nowId="";
+					if(lastId=="")
+					{
+						nowId=i;
+					}
+					else{
+						nowId=lastId+"."+i;
+					}
+					str+="<li class=\"NodeB\" id=\""+nowId+"\">";
+					str+="<span class=\"Content\">"+unitB.title+"</span>";
+					str+="</li>";
+				}
+				showAUnitS(baseA,1,"");
+				str+="</ul>";
+				list.innerHTML=str;
+				var view = document.querySelectorAll('.view')[0];
+					view.innerHTML="";
+			}
+		</script>
+	</body>
+</html>
