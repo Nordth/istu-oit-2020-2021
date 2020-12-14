@@ -1,0 +1,36 @@
+body {
+	position:relative;
+}
+
+.stol {
+	height: 30px;
+	width: 30px;
+	font-size: 17px;
+	background-color: green;
+	position: absolute;
+	border-radius:50%;
+	text-align: center;
+	top: 0;
+	left: 0;
+}
+
+.wrapper {
+	height: 500px;
+	width: 500px;
+	position: relative;
+}
+.wrapper img{
+	height: 500px;
+	width: 500px;
+}
+
+.top-wrapper {
+	display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    justify-content: left;
+}
+
+.guests {
+	
+}
