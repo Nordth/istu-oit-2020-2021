@@ -1,0 +1,75 @@
+.field {
+	display: flex;
+	justify-content: flex-end;
+	width: 600px;
+	margin: 30px;
+	border: 1px solid #000;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+.leftField {
+	width: 50%;
+	padding: 20px;
+	border-right: 1px solid #000;
+}
+.rightField {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	padding: 20px;
+}
+
+#selectedElements {
+	margin: 0 0 10px;
+}
+
+.btn {
+	margin: 10px 0;
+	padding: 5px;
+}
+.input {
+	width: 260px;
+	height: 17px;
+	margin-bottom: 10px;
+}
+
+.element {
+	display: flex;
+	justify-content: space-between;
+
+	height: 21px;
+	width: 260px;
+	margin-bottom: 10px;
+}
+
+textarea {
+	resize: none;
+	overflow: hidden;
+}
+
+.documentArea {
+	padding: 20px;
+	margin: 30px;
+}
+
+.h1doc {
+	margin-bottom: 15px;
+}
+
+.h2doc {
+	margin-bottom: 10px;
+}
+
+.pdoc {
+	margin-bottom: 10px;
+}
+
+@media print {
+	.field {
+		display: none;
+	}
+}
